@@ -3,13 +3,13 @@
 
 alert('Boas vindas ao jogo do número secreto!');
 
-let numerosecreto = 29;
+let numeroSecreto = 29;
 let chute = prompt('Escolha um número entre 1 e 30: ');
 
 
 //se o chute for igual ao número secreto
-if(numerosecreto == chute){
-    console.log('Você acertou o número secreto (5)');
+if(numeroSecreto == chute){
+    alert(`Você acertou o número secreto! ( ${numeroSecreto} )`);
 
 }else{
     alert('Você errou :(');
@@ -24,9 +24,9 @@ if (senha == senhaDoSistema){
     alert("Acesso ao sistema garantido");
 }
 */
-
+/*
 alert('Boas vindas ao nosso site!');
-
+/*
 /*
 let nome = Lua;
 let idade = 25;
