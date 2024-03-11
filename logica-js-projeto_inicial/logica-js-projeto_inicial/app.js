@@ -3,17 +3,45 @@
 
 alert('Boas vindas ao jogo do número secreto!');
 
-let numeroSecreto = 29;
-let chute = prompt('Escolha um número entre 1 e 30: ');
+let numeroMaximo = 100;
+let numeroSecreto = parseInt(Math.random()* numeroMaximo + 1); 
+let chute; 
+let tentativas = 1;
 
 
-//se o chute for igual ao número secreto
-if(numeroSecreto == chute){
-    alert(`Você acertou o número secreto! ( ${numeroSecreto} )`);
+while(chute != numeroSecreto){
 
-}else{
-    alert('Você errou :(');
+    chute = prompt(`Escolha um número entre 1 e ${numeroMaximo}: `);
+
+    //se o chute for igual ao número secreto
+    if(numeroSecreto == chute){
+        break;
+
+    }else{
+        if(chute > numeroSecreto){
+            alert(`O número secreto e menor que ${chute}`);
+
+        }else{
+            alert(`O número secreto e maior que ${chute}`);
+        }
+
+        tentativas++ ;
+    }
+
 }
+
+//Operador ternário
+
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+alert(`Você acertou o número secreto! ( ${numeroSecreto} ) com ${tentativas} ${palavraTentativa}`);
+
+/*
+if(tentativas = 1){
+    alert(`Você acertou o número secreto! ( ${numeroSecreto} ) com ${tentativas} tentativa`);
+}else{
+    alert(`Você acertou o número secreto! ( ${numeroSecreto} ) com ${tentativas} tentativas`);
+}
+*/
 
 /*
 let senhaDoSistema = "senhaTeste!";
